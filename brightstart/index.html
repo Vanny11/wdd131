@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Motivational Quotes</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Boost</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>  
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html" onclick="showPage('home')">Home</a></li>
-      <li><a href="todo.html" onclick="showPage('todo')">To-Do List</a></li>
-    </ul>
-  </nav>
-
+  <header>
+    <img src="image/brain.jpg" alt="Mind Boost Logo" class="icon">
+    <h1>Mind Boost</h1>
+  </header>
+  
   <main>
-    <section id="home" class="page">
-      <h1>Welcome to Your Daily Motivation</h1>
-      <blockquote id="quote"></blockquote>
-      <button onclick="newQuote()">New Quote</button>
+    <section>
+      <h2>Quote of the day</h2>
+      <div class="quote-image">
+        <p id="quote">Loading...</p>
+      </div>
+      <p id="author">- Author</p>
+      <button onclick="generateQuote()">New Quote</button>
     </section>
 
-    <section id="todo" class="page hidden">
-      <h1>Your To-Do List</h1>
-      <input type="text" id="todoInput" placeholder="Add a new task...">
-      <button onclick="addTask()">Add</button>
-      <ul id="todoList"></ul>
+    <section>
+      <h3>Journal Prompt</h3>
+      <p id="prompt">Loading prompt...</p>
+      <textarea placeholder="Write your journal entry here..."></textarea>
+      <button onclick="generatePrompt()">New Prompt</button>
+    </section>
+
+    <section>
+      <img src="image/bulb.png" alt="Bulb icon" class="icon">
+      <h3>Focus Tip: Tip</h3>
+      <p>Stay hydrated and stretch every hour for a healthy body and mind.</p>
+    </section>
+    
+    <section>
+      <a href="todo.html"><button>Go to To-Do Tracker</button></a>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Mind Boost. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
