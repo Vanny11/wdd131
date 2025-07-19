@@ -12,6 +12,18 @@ const prompts = [
   "Write about how you will take care of yourself today."
 ];
 
+const focusTips = [
+  "Stay hydrated and stretch every hour for a healthy body and mind.",
+  "Use the Pomodoro technique to boost focus and productivity.",
+  "Take regular eye breaks—look 20 feet away for 20 seconds every 20 minutes.",
+  "Keep your workspace clean and organized to reduce mental clutter.",
+  "Plan your top 3 tasks the night before.",
+  "Listen to calming instrumental music to stay in the zone.",
+  "Practice deep breathing for 1 minute to reset your mind.",
+  "Turn off non-essential notifications while working.",
+  "Celebrate small wins throughout your day."
+];
+
 function generateQuote() {
   const { quote, author } = quotes[Math.floor(Math.random() * quotes.length)];
   document.getElementById('quote').textContent = quote;
@@ -23,27 +35,16 @@ function generatePrompt() {
   document.getElementById('prompt').textContent = prompt;
 }
 
-function addTask() {
-  const input = document.getElementById('taskInput');
-  const value = input.value.trim();
-  if (value) {
-    const li = document.createElement('li');
-    li.classList.add('task');
-    li.innerHTML = `<div><input type="checkbox"> ${value}</div><button onclick="this.parentElement.remove()">X</button>`;
-    document.getElementById('taskList').appendChild(li);
-    input.value = '';
+function showRandomTip() {
+  const tip = focusTips[Math.floor(Math.random() * focusTips.length)];
+  const tipElement = document.getElementById('focusTip');
+  if (tipElement) {
+    tipElement.textContent = tip;
   }
-}
-
-function filterTasks(type) {
-  const tasks = document.querySelectorAll('#taskList li');
-  tasks.forEach(task => {
-    const checked = task.querySelector('input[type="checkbox"]').checked;
-    task.style.display = (type === 'all' || (type === 'incomplete' && !checked)) ? 'flex' : 'none';
-  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   generateQuote();
   generatePrompt();
+  showRandomTip();
 });

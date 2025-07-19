@@ -1,12 +1,13 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mind Boost</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mind Boost</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="image/logo.png" type="image/png">
+</head>  
 <body>
   <header>
     <img src="image/brain.jpg" alt="Mind Boost Logo" class="icon">
@@ -30,10 +31,10 @@
       <button onclick="generatePrompt()">New Prompt</button>
     </section>
 
-    <section>
+    <section class="focus-tip">
       <img src="image/bulb.png" alt="Bulb icon" class="icon">
-      <h3>Focus Tip: Tip</h3>
-      <p>Stay hydrated and stretch every hour for a healthy body and mind.</p>
+      <h3>Focus Tip</h3>
+      <p id="focusTip">Loading tip...</p>
     </section>
     
     <section>
@@ -48,3 +49,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
