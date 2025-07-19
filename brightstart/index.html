@@ -10,7 +10,7 @@
 </head>  
 <body>
   <header>
-    <img src="image/brain.jpg" alt="Mind Boost Logo" class="icon">
+    <img src="image/brain.jpg" alt="Mind Boost Logo" class="icon" width="130" height="130">
     <h1>Mind Boost</h1>
   </header>
   
@@ -27,12 +27,13 @@
     <section>
       <h3>Journal Prompt</h3>
       <p id="prompt">Loading prompt...</p>
-      <textarea placeholder="Write your journal entry here..."></textarea>
+      <label for="journal-entry" class="visually-hidden">Write your journal entry</label>
+      <textarea id="journal-entry" placeholder="Write your journal entry here..." aria-label="Journal Entry"></textarea>
       <button onclick="generatePrompt()">New Prompt</button>
     </section>
 
     <section class="focus-tip">
-      <img src="image/bulb.png" alt="Bulb icon" class="icon">
+      <img src="image/bulb.png" alt="Bulb icon for focus tips" class="icon" width="130" height="130">
       <h3>Focus Tip</h3>
       <p id="focusTip">Loading tip...</p>
     </section>
@@ -49,4 +50,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-

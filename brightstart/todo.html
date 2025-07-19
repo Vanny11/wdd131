@@ -1,36 +1,37 @@
 <!-- todo.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>To-Do Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="image/logo.png" type="image/png">
-  </head>
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="image/logo.png" type="image/png">
+</head>
 <body>
   <header>
     <h1>To-Do Tracker</h1>
-    <a href="index.html">&larr; Back to Home</a>
+    <a href="index.html">← Back to Home</a>
   </header>
 
   <main>
-    <img src="image/pencil.png" alt="Pencil Icon" class="icon" />
+    <img src="image/pencil.png" alt="Pencil icon representing notes" class="icon" width="130" height="130"/>
 
     <div>
+      <label for="taskInput" class="visually-hidden">Enter a new task</label>
       <input type="text" id="taskInput" placeholder="New Task" aria-label="New Task Input" />
-      <button onclick="addTask()" aria-label="Add task">Add Task</button>
+      <button onclick="addTask()">Add Task</button>
     </div>
 
     <ul id="taskList"></ul>
 
     <div>
       <button onclick="filterTasks('all')">Show All</button>
-      <button onclick="filterTasks('incomplete')">Show Incomplete</button>
+      <button onclick="filterTasks('incomplete')">Show only Incomplete</button>
     </div>
 
-    <img src="image/positive.jpg" alt="Encouraging image" class="encouragement-image" />
+    <img src="image/positive.jpg" alt="A motivational poster showing a positive message" class="encouragement-image" width="400" height="300"/>
+
     <p>You are doing great!</p>
   </main>
 
@@ -41,3 +42,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+

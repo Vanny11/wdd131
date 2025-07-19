@@ -18,6 +18,14 @@ html, body {
   scroll-behavior: smooth;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -223,3 +231,4 @@ footer {
   0% { opacity: 0; transform: translateY(-20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
